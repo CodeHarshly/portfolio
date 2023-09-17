@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "DM Sans", sans-serif;
+}
+:root {
+  /* Banner */
+  --outer-banner-height: 100vh;
+  --inner-banner-height: 80px;
+  --banner-height-difference: calc(
+    var(--outer-banner-height) - var(--inner-banner-height)
+  );
+  --banner-bg: #212121;
+  --banner-bg2: #272727;
+  --banner-bg3: #383838;
+  --image-width: 45vw;
+  --position-o: sticky;
+  
+  
+}
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body {
+  background-color: #f2f5f7;
+}
+section{
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+.home-content  span{
+  color: lime;
+}
+.header {
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99; /* Ensure the navigation bar appears above other elements */
+}
+.navbar a {
+  font-size: 1.7em;
+  margin-left: 4rem;
+  font-weight: 600;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  font-size: 1.8rem;
+  transition: .3s;
+  opacity: 0;
+  animation: slidemenu 1s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+}
+.navbar a:hover,
+.navbar a.active {
+  color:lime;
+}
+
+/* Sticky banner */
+.home {
+  /* Make it stick */
+  min-height: var(--outer-banner-height);
+  position: sticky;
+  top: calc(var(--banner-height-difference) * -1); /* Multiply by -1 to get a negative value */
+  display: flex;
+  align-items: center;
+  
+  /* Other */ 
+  background-color: var(--banner-bg);
+  z-index: 98;
+}
+
+.inner-banner {
+  /* Make it stick */
+  height: var(--inner-banner-height);
+  position: var(--position-o);
+  top: 0;
+  
+  /* Other */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-image {
+  position: relative;
+  left: 30px;
+  top: 0px;
+  width: var(--image-width);
+  transition: .3s;
+  opacity: 0;
+  animation: slideimg1 1s ease forwards;
+}
+
+.home-content{
+  margin:auto 50px;
+}
+.home-content h1{
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: rgb(255, 255, 255);
+  transition: .3s;
+  opacity: 0;
+  animation: slidehh1 .7s ease forwards;
+}
+.home-content h2{
+  display: none;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+}
+.home-content h3{
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  transition: .3s;
+  opacity: 0;
+  animation: slidehh3 .5s ease forwards;
+}
+.home-content h4{
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  transition: .3s;
+  opacity: 0;
+  animation: slidehh4 1s ease forwards;
+}
+h3.hide{
+  display: none;
+}
+h2.hide{
+  display: block;
+}
+h1.hide{
+  display: none;
+}
+h4.hide{
+  display: none;
+}
+
+@keyframes slidemenu {
+  0%{
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideimg1 {
+  0%{
+    transform: translateX(-400px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slidehh1 {
+  0%{
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slidehh3 {
+  0%{
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slidehh4 {
+  0%{
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,9 @@
+.project{
+   background-color: var(--banner-bg2);
+}
+.project h1 span{
+   color:lime;
+}
+.project h1{
+   font-size: 4rem;
+}

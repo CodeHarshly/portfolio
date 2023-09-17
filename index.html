@@ -1,12 +1,163 @@
 <html>
 <head>
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/about.css" />
+<link rel="stylesheet" type="text/css" href="css/skill.css">
+<link rel="stylesheet" type="text/css" href="css/project.css">
+<link rel="stylesheet" type="text/css" href="css/contact.css">
 
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 </head>
-<body style="display: flex;flex-direction:column;align-items:center;">
-<h1 style="color:lightgreeen;">Welcome to my resume</h1>
-<p>To visit my website <a href ="other.html">click here </a></p>
-	
-</header>
+<body>
+    
+    <header class="header">
+        <div></div>
+    <nav class="navbar" id="navbar">
+        <a href="#" style="--i:1" class="active">Home</a>
+        <a href="#about" style="--i:2">About</a>        
+        <a href="#skill" style="--i:3">Skill</a>        
+        <a href="#project" style="--i:4">Project</a>
+        <a href="#contact" style="--i:5">Contact</a>
+    </nav>
+    </header>
+
+    <div class="home" id="home" > 
+        <div class="inner-banner">
+            <img src="images/Harsh.png" alt="Profile Image" class="custom-image">
+            <div class="home-content">
+                <h3>Hey there,</h3>
+                <h1>I'm <span>Harshdeep Singh</span></h1>
+                <h4>And a <span id="word" ></span></h4>
+                <h2><span>Harshdeep Singh</span></h2>
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    <section class="about" id="about">
+        <img src="images/Harsh.png" alt="Profile Image" class="custom-image1">
+        <div class="about-content">
+            <h1 class="head">About <span>Me</span></h1>
+            <h2></h2>
+            <p>I'm a passionate and curious computer science enthusiast with a strong appetite for learning and coding. As a fresher, I've already built a website and developed a Windows game, showcasing my dedication to mastering new skills in the world of programming. I'm excited to embark on a journey of continuous growth and innovation in the field of computer science.</p>
+            <div class="social">
+                <a href="#" style="--i:1"><i class='bx bxl-instagram'></i></a>
+                <a href="#" style="--i:2"><i class='bx bxl-facebook'></i></a>
+                <a href="#" style="--i:3"><i class='bx bxl-linkedin'></i></a>
+            </div>
+            <a href="#" class="bt" >Download CV</a><a href="#" class="bt">Read more</a>
+        </div>
+    </section>
+    
+    <section class="skill" id="skill">
+        <h1 class="title">My <span>Skills</span></h1>
+        <div class="s-content">    
+            <div class="skill-content">
+            
+                <h2>Technical Skills</h2>
+                <div class="technical-bars">
+                    <div class="bar"><i style="color:rgb(255, 123, 0)"class='bx bxl-html5'></i>
+                        <div class="info">
+                            <span>HTML</span>
+                        </div>
+                        <div class="progress-line html">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="bar"><i style="color: blue;" class='bx bxl-css3' ></i>
+                        <div class="info">
+                            <span>css</span>
+                        </div>
+                        <div class="progress-line css">
+                           <span></span>
+                       </div>
+                    </div>
+                    <div class="bar"><i style="color: rgba(255, 255, 0, 0.884);" class='bx bxl-javascript' ></i>
+                        <div class="info">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="progress-line javascript">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="bar"><i style="color:  #474A8A;" class='bx bxl-php' ></i>
+                        <div class="info">
+                            <span>PHP</span>
+                        </div>
+                        <div class="progress-line php">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="bar"><i style="color: rgb(59, 59, 172);" class='bx bxl-c-plus-plus' ></i>
+                        <div class="info">
+                            <span>C++</span>
+                        </div>
+                        <div class="progress-line cpp">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="bar"><i style="color: rgb(59, 59, 172);" class='bx bxl-python' ></i>
+                       <div class="info">
+                           <span>Python</span>
+                        </div>
+                        <div class="progress-line python">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="skill-content">   
+            <h2>Pro</h2>
+            <div class="radial-bars">
+            <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">90%</div>
+                <div class="text">Creativity</div>
+            </div>
+            <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">80%</div>
+                <div class="text">Communication</div>
+            </div>
+            <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">75%</div>
+                <div class="text">Problem solving</div>
+            </div>
+            <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">80%</div>
+                <div class="text">Teamwork</div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="project" id="project">
+        <h1 class="title"><span>Projects</span> </h1>
+
+    </section>
+    <section class="contact" id="contact">
+        <h1 class="title">Contact <span>Me</span></h1>
+        <div class="contact-content">
+           
+            
+        </div>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>

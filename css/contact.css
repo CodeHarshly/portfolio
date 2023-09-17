@@ -1,0 +1,9 @@
+.contact{
+   background-color: var(--banner-bg3);
+}
+.contact h1 span{
+   color:lime;
+}
+.contact h1{
+   font-size: 4rem;
+}
