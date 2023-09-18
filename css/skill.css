@@ -266,3 +266,9 @@
     flex-direction: column;
   }
 }
+@media (max-width:768px){
+  .skill h2{
+    margin-bottom: 3rem;
+  }
+
+}

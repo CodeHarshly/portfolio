@@ -9,12 +9,6 @@
   font-family: "DM Sans", sans-serif;
 }
 :root {
-  /* Banner */
-  --outer-banner-height: 100vh;
-  --inner-banner-height: 80px;
-  --banner-height-difference: calc(
-    var(--outer-banner-height) - var(--inner-banner-height)
-  );
   --banner-bg: #212121;
   --banner-bg2: #272727;
   --banner-bg3: #383838;
@@ -240,6 +234,12 @@ h4.hide{
   }
   section {
     padding: 10rem 3% 2rem;
+  }
+  .skill{
+    padding-bottom: 7rem;
+  }
+  .contact{
+    min-height: auto;
   }
   .footer{
     padding: 2rem 3%;
