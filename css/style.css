@@ -20,7 +20,7 @@
   --banner-bg3: #383838;
   --image-width: 45vw;
   --position-o: sticky;
-  
+  --head-padding: 3rem 5%;
   
 }
 html{
@@ -34,20 +34,59 @@ section{
   min-height: 100vh;
   padding: 10rem 9% 2rem;
 }
-.home-content  span{
-  color: lime;
-}
+
 .header {
   position: fixed;
   top:0;
   left: 0;
   width: 100%;
-  padding: 2rem 10%;
-  background: transparent;
+  padding: var(--head-padding);
+  background: var(--banner-bg);
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 99; /* Ensure the navigation bar appears above other elements */
+}
+.header.sticky {
+  border-bottom: .1rem solid rgba(0, 0, 0, .2);
+}
+.head-content{
+  display: flex;
+  align-items: center;
+}
+.head-content  span{
+  color: lime;
+}
+.head-content h2{
+  display: none;
+  font-size: 1.6rem;
+  margin: auto 2rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255); opacity: 0;
+  animation: slidehelement 1s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+}
+h2.hide{
+  display: block;
+}
+.header-image{
+  display: none;
+  position: relative;
+  left: 10px;
+  top: 0px;
+  width: 3vw;
+  transition: .3s;
+  opacity: 0;
+  animation: slideheadimg 1s ease forwards;
+  animation-delay: calc(.2s * var(--i));
+}
+.header-image.hide{
+  display: block;
+}
+#menu-icon {
+  font-size: 3.6rem;
+  color: white;
+  display:none;
 }
 .navbar a {
   font-size: 1.7em;
@@ -66,44 +105,35 @@ section{
   color:lime;
 }
 
-/* Sticky banner */
+/* home page desgin */
 .home {
-  /* Make it stick */
-  min-height: var(--outer-banner-height);
-  position: sticky;
-  top: calc(var(--banner-height-difference) * -1); /* Multiply by -1 to get a negative value */
   display: flex;
+  justify-content: center;
   align-items: center;
-  
-  /* Other */ 
   background-color: var(--banner-bg);
-  z-index: 98;
 }
-
+.home-content  span{
+  color: lime;
+}
 .inner-banner {
-  /* Make it stick */
-  height: var(--inner-banner-height);
-  position: var(--position-o);
-  top: 0;
-  
-  /* Other */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .custom-image {
+  display: block;
   position: relative;
   left: 30px;
   top: 0px;
-  width: var(--image-width);
+  width: 45vw;
   transition: .3s;
   opacity: 0;
-  animation: slideimg1 1s ease forwards;
+  animation: slidehomeimg 1s ease forwards;
 }
 
 .home-content{
-  margin:auto 50px;
+  margin: auto 8rem;
 }
 .home-content h1{
   font-size: 4.2rem;
@@ -112,20 +142,18 @@ section{
   color: rgb(255, 255, 255);
   transition: .3s;
   opacity: 0;
-  animation: slidehh1 .7s ease forwards;
+  animation: slidehelement 1s ease forwards;
+  animation-delay: .7s;
 }
-.home-content h2{
-  display: none;
-  font-weight: 700;
-  color: rgb(255, 255, 255);
-}
+
 .home-content h3{
   font-size: 3.2rem;
   font-weight: 700;
   color: rgb(255, 255, 255);
   transition: .3s;
   opacity: 0;
-  animation: slidehh3 .5s ease forwards;
+  animation: slidehelement 1s ease forwards;
+  animation-delay: .7s;
 }
 .home-content h4{
   font-size: 3.2rem;
@@ -133,13 +161,15 @@ section{
   color: rgb(255, 255, 255);
   transition: .3s;
   opacity: 0;
-  animation: slidehh4 1s ease forwards;
+  animation: slidehelement 1s ease forwards;
+  animation-delay: .7s;
+}
+
+.custom-image.hide{
+  display:none;
 }
 h3.hide{
   display: none;
-}
-h2.hide{
-  display: block;
 }
 h1.hide{
   display: none;
@@ -158,6 +188,26 @@ h4.hide{
     opacity: 1;
   }
 }
+@keyframes slideheadimg {
+  0%{
+    transform: translate(0,0);
+    opacity: 0;
+  }
+  100%{
+    transform: translate(0,0);
+    opacity: 1;
+  }
+}
+@keyframes slidehomeimg {
+  0%{
+    transform: translate(-200px,-200px);
+    opacity: 0;
+  }
+  100%{
+    transform: translate(0,0);
+    opacity: 1;
+  }
+}
 @keyframes slideimg1 {
   0%{
     transform: translateX(-400px);
@@ -169,9 +219,9 @@ h4.hide{
   }
 }
 
-@keyframes slidehh1 {
+@keyframes slidehelement {
   0%{
-    transform: translateX(400px);
+    transform: translateX(100px);
     opacity: 0;
   }
   100%{
@@ -179,23 +229,61 @@ h4.hide{
     opacity: 1;
   }
 }
-@keyframes slidehh3 {
-  0%{
-    transform: translateX(400px);
-    opacity: 0;
-  }
-  100%{
-    transform: translateX(0px);
-    opacity: 1;
+@media (max-width:1200px){
+  html {
+    font-size: 55%;
   }
 }
-@keyframes slidehh4 {
-  0%{
-    transform: translateX(400px);
-    opacity: 0;
+@media (max-width:991px){
+  .header {
+    padding: 2rem 2%;
   }
-  100%{
-    transform: translateX(0px);
-    opacity: 1;
+  section {
+    padding: 10rem 3% 2rem;
   }
+  .footer{
+    padding: 2rem 3%;
+  }
+}
+@media (max-width:768px){
+  #menu-icon {
+    display: block;
+  }
+  .navbar {
+    position:absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background-color: var(--banner-bg);
+    border-top: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    display: none;
+
+  }
+  .navbar.active {
+    display: block;
+  }
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+  .inner-banner {
+    flex-direction: column-reverse;
+  }
+  .home-content h3{
+    font-size:2.6rem;
+  }
+  .home-content h4{
+    font-size:2.6rem;
+  }
+  .home-content h1{
+    font-size: 4rem;
+  }
+  .custom-image {
+    width: 70vw;
+    margin-top: 4rem;
+  }
+  
 }

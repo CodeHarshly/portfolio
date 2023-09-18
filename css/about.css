@@ -148,3 +148,12 @@
     opacity: 1;
   }
 }
+@media (max-width:768px){
+  .about {
+    flex-direction: column-reverse;
+  }
+  .custom-image1 {
+    width: 70vw;
+    margin: 4rem 0;
+  }
+}
