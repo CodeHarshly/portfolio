@@ -52,7 +52,6 @@
    font-weight: 600;
    z-index: 1;
    box-shadow: 3px 3px 8px #5f5f5f ;
-   animation: slidebt .5s ease forwards;
  }
 .contact form .btn{
    margin-top: 2rem;

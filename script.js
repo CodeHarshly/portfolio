@@ -7,8 +7,10 @@
         const h3Element = document.querySelector("h3");
         const h2Element = document.querySelector("h2");
         const h4Element = document.querySelector("h4");
+        const pElement = document.querySelector(".about-content");
         const scrollPos = window.scrollY;
         const scrollThreshold = 100;
+        const scrollThreshold2 = 1500;
 
         if (scrollPos > scrollThreshold) {
             headimage.classList.add("hide");
@@ -18,15 +20,20 @@
             h4Element.classList.add("hide");
             homeimage.classList.add("hide");
             headerpad.style.setProperty("--head-padding", "1.55rem 5%");
-    } else {
-        headimage.classList.remove("hide");
-        h1Element.classList.remove("hide");
-        h2Element.classList.remove("hide");
-        h3Element.classList.remove("hide");
-        h4Element.classList.remove("hide");
-        homeimage.classList.remove("hide");
-        headerpad.style.setProperty("--head-padding", "3rem 5%");
-    }
+        } else {
+            headimage.classList.remove("hide");
+            h1Element.classList.remove("hide");
+            h2Element.classList.remove("hide");
+            h3Element.classList.remove("hide");
+            h4Element.classList.remove("hide");
+            homeimage.classList.remove("hide");
+            headerpad.style.setProperty("--head-padding", "3rem 5%");
+        }
+        if (scrollPos > scrollThreshold2 || scrollPos < scrollThreshold) {
+            pElement.classList.add("hide");
+        } else {
+            pElement.classList.remove("hide");
+        }
     });
     //sdyhs
     // Define a function to initialize the Typed.js animation
@@ -79,3 +86,15 @@ window.onscroll= () => {
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 };
+// scroll behaviour
+ScrollReveal({ 
+    reset: true, 
+    distance: '80px',
+    duration: 2000,
+    delay: 200
+});
+
+ScrollReveal().reveal('.home-content, .about-head, .title', { origin: 'top' });
+ScrollReveal().reveal('.project-content, .bt, .btn, .input-box2, .c-bottom', { origin: 'bottom' });
+ScrollReveal().reveal('.right', { origin: 'right' });
+ScrollReveal().reveal('.left', { origin: 'left' });

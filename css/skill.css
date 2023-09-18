@@ -39,7 +39,7 @@
     font-size: 23px;
   }
   .technical-bars .bar{
-    margin: 40px 0;
+    margin: 40px;
 
   }
   .technical-bars .bar:first-child{
@@ -216,7 +216,7 @@
   width: 100%;
   position: absolute;
   text-align: center;
-  left: 50%;
+  left: 25%;
   bottom: -5px;
   transform: translateX(-50px);
   font-size: 17px;
