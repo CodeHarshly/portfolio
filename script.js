@@ -96,12 +96,12 @@ ScrollReveal({
 if (window.innerWidth > 768) {
     ScrollReveal().reveal('.home-content, .about-head, .title', { origin: 'top'});
     ScrollReveal().reveal('.project-content, .bt, .btn, .input-box2, .c-bottom', { origin: 'bottom'});
-    ScrollReveal().reveal('.right', { origin: 'right'});
+    ScrollReveal().reveal('.right,.rightskill', { origin: 'right'});
     ScrollReveal().reveal('.left', { origin: 'left' });
 }
 if (window.innerWidth <= 768) {
     ScrollReveal().reveal('.home-content, .about-head, .title', { origin: 'top', distance: '40px' });
-    ScrollReveal().reveal('.project-content, .bt, .btn, .input-box2, .c-bottom', { origin: 'bottom', distance: '40px' });
+    ScrollReveal().reveal('.project-content, .bt, .btn, .input-box2, .c-bottom, .bottomskill', { origin: 'bottom', distance: '40px' });
     ScrollReveal().reveal('.right', { origin: 'right', distance: '20px'});
     ScrollReveal().reveal('.left', { origin: 'left', distance: '20px' });
 }
