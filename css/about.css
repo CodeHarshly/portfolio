@@ -32,8 +32,6 @@
   top: 0;
   width: 40vw;
   transition: .3s;
-  opacity: 0;
-  animation: slideimg2 .5s ease forwards;
   /*box-shadow: 3px 3px 8px #5f5f5f;*/
 }
 .social a{
@@ -112,17 +110,7 @@
 }
 @keyframes slideap {
   0%{
-    transform: translateX(400px);
-    opacity: 0;
-  }
-  100%{
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-@keyframes slideimg2 {
-  0%{
-    transform: translateX(-400px);
+    transform: translateX(100px);
     opacity: 0;
   }
   100%{

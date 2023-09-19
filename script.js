@@ -90,11 +90,18 @@ window.onscroll= () => {
 ScrollReveal({ 
     reset: true, 
     distance: '80px',
-    duration: 2000,
-    delay: 200
+    duration: 1000,
+    delay: 150
 });
-
-ScrollReveal().reveal('.home-content, .about-head, .title', { origin: 'top' });
-ScrollReveal().reveal('.project-content, .bt, .btn, .input-box2, .c-bottom', { origin: 'bottom' });
-ScrollReveal().reveal('.right', { origin: 'right' });
-ScrollReveal().reveal('.left', { origin: 'left' });
+if (window.innerWidth > 778) {
+    ScrollReveal().reveal('.home-content, .about-head, .title', { origin: 'top'});
+    ScrollReveal().reveal('.project-content, .bt, .btn, .input-box2, .c-bottom', { origin: 'bottom'});
+    ScrollReveal().reveal('.right', { origin: 'right'});
+    ScrollReveal().reveal('.left', { origin: 'left' });
+}
+if (window.innerWidth <= 778) {
+    ScrollReveal().reveal('.home-content, .about-head, .title', { origin: 'top', distance: '25px' });
+    ScrollReveal().reveal('.project-content, .bt, .btn, .input-box2, .c-bottom', { origin: 'bottom', distance: '25px' });
+    ScrollReveal().reveal('.right', { origin: 'right', distance: '25px'});
+    ScrollReveal().reveal('.left', { origin: 'left', distance: '25px' });
+}
