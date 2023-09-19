@@ -19,8 +19,8 @@
     justify-content: center;
   }
   .skill-content {
-    width:100%;
-    padding: 3.8rem 4.5rem;
+    width:400px;
+    padding: 0;
   }
   
   .skill h1{
@@ -40,7 +40,6 @@
   }
   .technical-bars .bar{
     margin: 40px 0;
-    min-width: 40rem;
 
   }
   .technical-bars .bar:first-child{
@@ -156,7 +155,6 @@
 
 .radial-bars{
   width: 100%;
-  min-width: 40rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
