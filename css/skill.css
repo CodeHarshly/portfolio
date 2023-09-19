@@ -40,8 +40,6 @@
   }
   .technical-bars .bar{
     margin: 10px 0;
-    min-width: 40rem;
-
   }
   .technical-bars .bar:first-child{
     margin-top: 0;
@@ -156,7 +154,6 @@
 
 .radial-bars{
   width: 100%;
-  min-width: 40rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
