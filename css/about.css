@@ -20,9 +20,7 @@
   font-size: 1.8rem;
   line-height: 1.5;
 }
-.about-content.hide{
-  display: none;
-}
+
 .custom-image1 {
   display: inline-block;
   position: relative;
@@ -49,6 +47,9 @@
   animation: slidesoc 1s ease forwards;
   animation-delay: calc(.2s * var(--i));
   margin: 1.5rem 1.5rem 1.5rem 0;
+}
+.social.hide{
+  display: none;
 }
 .social a:hover{
   background: lime;
