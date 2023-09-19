@@ -217,7 +217,7 @@
   width: 100%;
   position: absolute;
   text-align: center;
-  left: 25%;
+  left: 35%;
   bottom: -5px;
   transform: translateX(-50px);
   font-size: 17px;
@@ -272,6 +272,6 @@
     margin-bottom: 3rem;
   }
   .radial-bars{
-    min-width: 10rem;
+    min-width: none;
   }
 }
