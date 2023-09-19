@@ -40,7 +40,7 @@
   }
   .technical-bars .bar{
     margin: 40px 0;
-    min-width: 40rem;
+    min-width: 30rem;
   }
   .technical-bars .bar:first-child{
     margin-top: 0;
@@ -155,7 +155,7 @@
 
 .radial-bars{
   width: 100%;
-  min-width: 40rem;
+  min-width: 30rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -271,5 +271,7 @@
   .skill h2{
     margin-bottom: 3rem;
   }
-
+  .radial-bars{
+    min-width: 10rem;
+  }
 }
