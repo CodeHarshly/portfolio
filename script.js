@@ -102,6 +102,6 @@ if (window.innerWidth > 768) {
 if (window.innerWidth <= 768) {
     ScrollReveal().reveal('.home-content, .about-head, .title', { origin: 'top', distance: '40px' });
     ScrollReveal().reveal('.project-content, .bt, .btn, .input-box2, .c-bottom, .bottomskill', { origin: 'bottom', distance: '40px' });
-    ScrollReveal().reveal('.right', { origin: 'right', distance: '0px'});
+    ScrollReveal().reveal('.rightc', { origin: 'right', distance: '20px'});
     ScrollReveal().reveal('.left', { origin: 'left', distance: '20px' });
 }
