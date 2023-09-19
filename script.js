@@ -93,15 +93,15 @@ ScrollReveal({
     duration: 1000,
     delay: 150
 });
-if (window.innerWidth > 778) {
+if (window.innerWidth > 768) {
     ScrollReveal().reveal('.home-content, .about-head, .title', { origin: 'top'});
     ScrollReveal().reveal('.project-content, .bt, .btn, .input-box2, .c-bottom', { origin: 'bottom'});
     ScrollReveal().reveal('.right', { origin: 'right'});
     ScrollReveal().reveal('.left', { origin: 'left' });
 }
-if (window.innerWidth <= 778) {
-    ScrollReveal().reveal('.home-content, .about-head, .title', { origin: 'top', distance: '25px' });
-    ScrollReveal().reveal('.project-content, .bt, .btn, .input-box2, .c-bottom', { origin: 'bottom', distance: '25px' });
-    ScrollReveal().reveal('.right', { origin: 'right', distance: '25px'});
-    ScrollReveal().reveal('.left', { origin: 'left', distance: '25px' });
+if (window.innerWidth <= 768) {
+    ScrollReveal().reveal('.home-content, .about-head, .title', { origin: 'top', distance: '10px' });
+    ScrollReveal().reveal('.project-content, .bt, .btn, .input-box2, .c-bottom', { origin: 'bottom', distance: '10px' });
+    ScrollReveal().reveal('.right', { origin: 'right', distance: '10px'});
+    ScrollReveal().reveal('.left', { origin: 'left', distance: '10px' });
 }
