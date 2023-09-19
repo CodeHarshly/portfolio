@@ -96,7 +96,7 @@ ScrollReveal({
 if (window.innerWidth > 768) {
     ScrollReveal().reveal('.home-content, .about-head, .title', { origin: 'top'});
     ScrollReveal().reveal('.project-content, .bt, .btn, .input-box2, .c-bottom', { origin: 'bottom'});
-    ScrollReveal().reveal('.right,.rightskill', { origin: 'right'});
+    ScrollReveal().reveal('.right, .rightskill', { origin: 'right'});
     ScrollReveal().reveal('.left', { origin: 'left' });
 }
 if (window.innerWidth <= 768) {
