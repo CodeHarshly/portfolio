@@ -19,8 +19,8 @@
     justify-content: center;
   }
   .skill-content {
-    width:100%;
-    padding: 3.8rem 4.5rem;
+    width:0;
+    padding: 0;
   }
   
   .skill h1{
@@ -39,7 +39,7 @@
     font-size: 23px;
   }
   .technical-bars .bar{
-    margin: 40px 0;
+    margin: 10px 0;
     min-width: 40rem;
 
   }
@@ -116,7 +116,7 @@
   font-size: 12px;
   border-radius: 3px;
   top:-28px;
-  right:-20px;
+  right:0px;
   animation: showtext 0.5s 1.5s linear forwards;
   opacity:0;
 }
