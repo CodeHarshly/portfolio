@@ -18,7 +18,7 @@
 .projects-box{
    position: relative;
    border-radius: 2rem;
-   box-shadow: 0 0 1rem var(--banner-bg);
+   box-shadow: 0 0 1rem var(--banner-bg3);
    overflow: hidden;
    display: flex;
 }
@@ -30,7 +30,7 @@
    transform: scale(1.1);
 }
 .project h1 span{
-   color:lime;
+   color:var(--special-color);
 }
 .project h1{
    font-size: 4rem;
@@ -42,7 +42,7 @@
    left: 0;
    width: 100%;
    height: 100%;
-   background: linear-gradient(rgba(0,0,0,.1), lime);
+   background: linear-gradient(rgba(0,0,0,.1), var(--special-color));
    display: flex;
    justify-content: center;
    align-items: center;
@@ -75,7 +75,7 @@
 }
 .project-layer a i{
    font-size: 2rem;
-   color: var(--banner-bg)
+   color: black;
 }
 @media (max-width:768px){
    .project h2 {

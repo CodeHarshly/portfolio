@@ -15,7 +15,15 @@
   --image-width: 45vw;
   --position-o: sticky;
   --head-padding: 3rem 5%;
-  
+  --special-color: lime;
+  --text-color: white;
+}
+.light-mode {
+  --text-color: black;
+  --banner-bg: white;
+  --banner-bg2: rgb(216, 216, 216);
+  --banner-bg3: #ffffffe8;
+  --special-color: #fc7100;
 }
 html{
   font-size: 62.5%;
@@ -36,6 +44,7 @@ section{
   width: 100%;
   padding: var(--head-padding);
   background: var(--banner-bg);
+  border: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,14 +58,14 @@ section{
   align-items: center;
 }
 .head-content  span{
-  color: lime;
+  color: var(--special-color);
 }
 .head-content h2{
   display: none;
   font-size: 1.6rem;
   margin: auto 2rem;
   font-weight: 700;
-  color: rgb(255, 255, 255); opacity: 0;
+  color: var(--text-color); opacity: 0;
   animation: slidehelement 1s ease forwards;
   animation-delay: calc(.2s * var(--i));
 }
@@ -79,7 +88,7 @@ h2.hide{
 }
 #menu-icon {
   font-size: 3.6rem;
-  color: white;
+  color: var(--text-color);
   display:none;
 }
 .navbar a {
@@ -87,7 +96,7 @@ h2.hide{
   margin-left: 4rem;
   font-weight: 600;
   display: inline-block;
-  color: rgb(255, 255, 255);
+  color: var(--text-color);
   font-size: 1.8rem;
   transition: .3s;
   opacity: 0;
@@ -96,7 +105,7 @@ h2.hide{
 }
 .navbar a:hover,
 .navbar a.active {
-  color:lime;
+  color:var(--special-color);
 }
 
 /* home page desgin */
@@ -107,7 +116,7 @@ h2.hide{
   background-color: var(--banner-bg);
 }
 .home-content  span{
-  color: lime;
+  color: var(--special-color);
 }
 .inner-banner {
   display: flex;
@@ -120,7 +129,6 @@ h2.hide{
   position: relative;
   left: 30px;
   top: 0px;
-  
   transition: .3s;
   opacity: 0;
   animation: slidehomeimg 1s ease forwards;
@@ -168,7 +176,7 @@ h2.hide{
   font-size: 4.2rem;
   font-weight: 700;
   line-height: 1.5;
-  color: rgb(255, 255, 255);
+  color: var(--text-color);
   transition: .3s;
   opacity: 0;
   animation: slidehelement 1s ease forwards;
@@ -178,7 +186,7 @@ h2.hide{
 .home-content h3{
   font-size: 3.2rem;
   font-weight: 700;
-  color: rgb(255, 255, 255);
+  color: var(--text-color);
   transition: .3s;
   opacity: 0;
   animation: slidehelement 1s ease forwards;
@@ -187,7 +195,7 @@ h2.hide{
 .home-content h4{
   font-size: 3.2rem;
   font-weight: 700;
-  color: rgb(255, 255, 255);
+  color: var(--text-color);
   transition: .3s;
   opacity: 0;
   animation: slidehelement 1s ease forwards;
