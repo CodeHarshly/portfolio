@@ -23,7 +23,7 @@
   --banner-bg: white;
   --banner-bg2: rgb(216, 216, 216);
   --banner-bg3: #ffffffe8;
-  --special-color: #fc7100;
+  --special-color: #ff4321;
 }
 html{
   font-size: 62.5%;
@@ -44,7 +44,6 @@ section{
   width: 100%;
   padding: var(--head-padding);
   background: var(--banner-bg);
-  border: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -65,7 +64,8 @@ section{
   font-size: 1.6rem;
   margin: auto 2rem;
   font-weight: 700;
-  color: var(--text-color); opacity: 0;
+  color: var(--text-color); 
+  opacity: 0;
   animation: slidehelement 1s ease forwards;
   animation-delay: calc(.2s * var(--i));
 }
