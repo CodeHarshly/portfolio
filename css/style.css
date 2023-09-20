@@ -68,7 +68,7 @@ h2.hide{
   position: relative;
   left: 10px;
   top: 0px;
-  width: 3vw;
+  width: 4vw;
   transition: .3s;
   opacity: 0;
   animation: slideheadimg 1s ease forwards;
@@ -120,12 +120,47 @@ h2.hide{
   position: relative;
   left: 30px;
   top: 0px;
-  width: 45vw;
+  
   transition: .3s;
   opacity: 0;
   animation: slidehomeimg 1s ease forwards;
 }
-
+.image1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 45vw;
+  animation: floatImg1 4s ease-in-out infinite;
+}
+.image2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45vw;
+  animation: floatImg2 4s ease-in-out infinite;
+}
+@keyframes floatImg1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1.4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes floatImg2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1.4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .home-content{
   margin: auto 8rem;
 }

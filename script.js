@@ -7,7 +7,7 @@
         const h3Element = document.querySelector("h3");
         const h2Element = document.querySelector("h2");
         const h4Element = document.querySelector("h4");
-        const pElement = document.querySelector(".social");
+        const pElement  = document.querySelector(".social");
         const scrollPos = window.scrollY;
         const scrollThreshold = 100;
         const scrollThreshold2 = 1500;
@@ -88,10 +88,10 @@ window.onscroll= () => {
 };
 // scroll behaviour
 ScrollReveal({ 
-    reset: true, 
+    //reset: true, 
     distance: '80px',
-    duration: 1000,
-    delay: 150
+    duration: 2000,
+    delay: 200
 });
 if (window.innerWidth > 768) {
     ScrollReveal().reveal('.home-content, .about-head, .title', { origin: 'top'});
