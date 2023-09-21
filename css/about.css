@@ -1,20 +1,26 @@
+/********************** About **********************/
+
 .about{
   display:flex;
   justify-content: center;
   align-items: center;
   background: var(--banner-bg2);
 }
+
 .about-content{
   margin: auto 6em;
   line-height:1.5;
   color: var(--text-color);
 }
+
 .about-content span{
   color:var(--special-color);
 }
+
 .about-head{
   font-size: 4rem;
 }
+
 .about-content p{
   display: block;
   font-size: 1.8rem;
@@ -28,8 +34,10 @@
   top: 0;
   width: 40vw;
   transition: .3s;
-  /*box-shadow: 3px 3px 8px #5f5f5f;*/
 }
+
+/********************** Social Media Link **********************/
+
 .social a{
   display: inline-flex;
   justify-content: center;
@@ -44,18 +52,23 @@
   box-shadow: 3px 3px 8px #5f5f5f;
   transition: .5s;
   opacity: 0;
-  animation: slidesoc 1s ease forwards;
+  animation: slidesoc 1s ease forwards; /*8*/
   animation-delay: calc(.2s * var(--i));
   margin: 1.5rem 1.5rem 1.5rem 0;
 }
+
 .social.hide{
   display: none;
 }
+
 .social a:hover{
   background: var(--special-color);
   color: var(--banner-bg2);
   box-shadow: 0 0 1rem var(--special-color);
 }
+
+/********************** Button **********************/
+
 .bt {
   display: inline-block;
   background-color: var(--banner-bg2);
@@ -72,6 +85,7 @@
   z-index: 1;
   box-shadow: 3px 3px 8px #5f5f5f ;
 }
+
 .bt::before {
   content: '';
   width: 0;
@@ -91,33 +105,16 @@
   width:100%;
     
 }
+
 .bt:hover {
   transition: .5s ease;
   color:var(--banner-bg2);
   box-shadow: 0 0 1rem var(--special-color);
 }
 
-@keyframes slideah1 {
-  0%{
-    transform: translateX(400px);
-    opacity: 0;
-  }
-  100%{
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-@keyframes slideap {
-  0%{
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  100%{
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-@keyframes slidesoc {
+/********************** Animation **********************/
+
+@keyframes slidesoc { /*8*/
   0% {
     transform: translateX(100px);
     opacity: 0;
@@ -127,16 +124,9 @@
     opacity: 1;
   }
 }
-@keyframes slidebt {
-  0%{
-    transform: translateY(400px);
-    opacity: 0;
-  }
-  100%{
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
+
+/********************** Mobile View **********************/
+
 @media (max-width:768px){
   .about {
     flex-direction: column-reverse;

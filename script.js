@@ -35,8 +35,9 @@
             pElement.classList.remove("hide");
         }
     });
-    //sdyhs
+
     // Define a function to initialize the Typed.js animation
+
 function startTypedAnimation() {
     var typed = new Typed("#word", {
         strings: ["Web Developer", "Game Developer"],
@@ -79,14 +80,14 @@ window.onscroll= () => {
             });
         };
     });
-    //let header = document.querySelector('header');
-    //header.classList.toggle('sticky',window,scrollY > 100)
     
     //remove toogle menu option
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 };
+
 // scroll behaviour
+
 ScrollReveal({ 
     //reset: true, 
     distance: '80px',

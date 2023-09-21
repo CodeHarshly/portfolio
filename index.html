@@ -6,13 +6,14 @@
     <link rel="stylesheet" type="text/css" href="css/skill.css">
     <link rel="stylesheet" type="text/css" href="css/project.css">
     <link rel="stylesheet" type="text/css" href="css/contact.css">
-    <link rel="stylesheet" type="text/css" href="css/button.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     
+    <!-------------------- Header ------------------------>
+
     <header class="header">
         <div class="head-content">
             <img src="images/harshpp.png" alt="Profile Image" style="--i:1" class="header-image">
@@ -25,13 +26,15 @@
             <a href="#skill" style="--i:3">Skill</a>        
             <a href="#project" style="--i:4">Project</a>
             <a href="#contact" style="--i:5">Contact</a>
-            <label class="switch">
-                <input type="checkbox" id="toggleButton" >
-                <span class="slider"></span>
-            </label>
+            
         </nav>
     </header>
-
+    <div class="lightmode" >
+        <img src="images/Moon.png" id="icon1" >
+    </div>
+    
+    <!-------------------- Home page ------------------------>
+    
     <section class="home" id="home" > 
         <div class="inner-banner">
             <div class="custom-image">
@@ -46,6 +49,7 @@
         </div>
     </section>
     
+    <!-------------------- About page ------------------------>
     
     <section class="about" id="about">
         <div class="custom-image1 left">
@@ -65,11 +69,14 @@
         </div>
     </section>
     
+    <!-------------------- Skill page ------------------------>
+    
     <section class="skill" id="skill">
         <h1 class="title">My <span>Skills</span></h1>
         <div class="s-content">    
             <div class="skill-content left">
-            
+                
+                <!-------------------- Technical skill ------------------------>
                 <h2>Technical Skills</h2>
                 <div class="technical-bars">
                     <div class="bar"><i style="color:rgb(255, 123, 0)"class='bx bxl-html5'></i>
@@ -122,45 +129,50 @@
                     </div>
                 </div>
             </div>
-        <div class="skill-content rightskill" class="bottomskill">   
-            <h2>Pro</h2>
-            <div class="radial-bars">
-            <div class="radial-bar">
-                <svg x="0px" y="0px" viewBox="0 0 200 200">
-                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-                </svg>
-                <div class="percentage">90%</div>
-                <div class="text">Creativity</div>
+
+            <!-------------------- Pro skill ------------------------>
+            <div class="skill-content rightskill" class="bottomskill">   
+                <h2>Professional skill</h2>
+                <div class="radial-bars">
+                    <div class="radial-bar">
+                       <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">90%</div>
+                        <div class="text">Creativity</div>
+                    </div>
+                    <div class="radial-bar">
+                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                           <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">80%</div>
+                        <div class="text">Communication</div>
+                    </div>
+                    <div class="radial-bar">
+                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">75%</div>
+                        <div class="text">Problem solving</div>
+                    </div>
+                    <div class="radial-bar">
+                        <svg x="0px" y="0px" viewBox="0 0 200 200">
+                            <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                            <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                        </svg>
+                        <div class="percentage">80%</div>
+                        <div class="text">Teamwork</div>
+                    </div>
+                </div>
             </div>
-            <div class="radial-bar">
-                <svg x="0px" y="0px" viewBox="0 0 200 200">
-                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                    <circle class="path path-2" cx="100" cy="100" r="80"></circle>
-                </svg>
-                <div class="percentage">80%</div>
-                <div class="text">Communication</div>
-            </div>
-            <div class="radial-bar">
-                <svg x="0px" y="0px" viewBox="0 0 200 200">
-                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                    <circle class="path path-3" cx="100" cy="100" r="80"></circle>
-                </svg>
-                <div class="percentage">75%</div>
-                <div class="text">Problem solving</div>
-            </div>
-            <div class="radial-bar">
-                <svg x="0px" y="0px" viewBox="0 0 200 200">
-                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                    <circle class="path path-4" cx="100" cy="100" r="80"></circle>
-                </svg>
-                <div class="percentage">80%</div>
-                <div class="text">Teamwork</div>
-            </div>
-            </div>
-        </div>
         </div>
     </section>
+    
+    <!-------------------- Project page ------------------------>
+    
     <section class="project" id="project">
         <h1 class="title"><span>Projects</span> </h1>
         <div class="project-content">
@@ -194,10 +206,11 @@
                     <p>workng on it</p>
                 </div>
             </div>
-            
         </div>
-
     </section>
+    
+    <!-------------------- Contact page ------------------------>
+    
     <section class="contact" id="contact">
         <h1 class="title">Contact <span>Me</span></h1>
         <form action="#">
@@ -212,6 +225,9 @@
             <input type="submit" value="Send Message" class="btn">
         </form>
     </section>
+    
+    <!-------------------- Footer ------------------------>
+    
     <footer class="footer">
         <div class="footer-content">
             <p>Thank you for visiting my Portfolio.</p>
@@ -220,8 +236,11 @@
             <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
         </div>
     </footer>
+
     <!--------------script---------------->
+
     <script src="script.js"></script>
-    <script src="button.js"></script>
+    <script src="LightMode.js"></script>
+
 </body>
 </html>

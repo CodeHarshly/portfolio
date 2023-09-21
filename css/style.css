@@ -8,6 +8,7 @@
   scroll-behavior: smooth;
   font-family: "DM Sans", sans-serif;
 }
+
 :root {
   --banner-bg: #212121;
   --banner-bg2: #272727;
@@ -17,25 +18,35 @@
   --head-padding: 3rem 5%;
   --special-color: lime;
   --text-color: white;
+  --light-1: #ffffffdc;
+  --light-2: #ddddddef;
 }
+
 .light-mode {
   --text-color: black;
   --banner-bg: white;
   --banner-bg2: rgb(216, 216, 216);
   --banner-bg3: #ffffffe8;
   --special-color: #ff4321;
+  --light-1: rgba(255, 166, 0, 0.767);
+  --light-2:rgba(255, 217, 0, 0.938);
 }
+
 html{
   font-size: 62.5%;
   overflow-x: hidden;
 }
+
 body {
   background-color: #f2f5f7;
 }
+
 section{
   min-height: 100vh;
   padding: 10rem 9% 2rem;
 }
+
+/********************** Header Desgin **********************/
 
 .header {
   position: fixed;
@@ -47,18 +58,18 @@ section{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 99; /* Ensure the navigation bar appears above other elements */
+  z-index: 99; 
 }
-/*.header.sticky {
-  border-bottom: .1rem solid rgba(0, 0, 0, .2);
-}*/
+
 .head-content{
   display: flex;
   align-items: center;
 }
+
 .head-content  span{
   color: var(--special-color);
 }
+
 .head-content h2{
   display: none;
   font-size: 1.6rem;
@@ -66,12 +77,14 @@ section{
   font-weight: 700;
   color: var(--text-color); 
   opacity: 0;
-  animation: slidehelement 1s ease forwards;
+  animation: slidehelement 1s ease forwards; /*1*/
   animation-delay: calc(.2s * var(--i));
 }
+
 h2.hide{
   display: block;
 }
+
 .header-image{
   display: none;
   position: relative;
@@ -80,17 +93,20 @@ h2.hide{
   width: 4vw;
   transition: .3s;
   opacity: 0;
-  animation: slideheadimg 1s ease forwards;
+  animation: slideheadimg 1s ease forwards; /*2*/
   animation-delay: calc(.2s * var(--i));
 }
+
 .header-image.hide{
   display: block;
 }
+
 #menu-icon {
   font-size: 3.6rem;
   color: var(--text-color);
   display:none;
 }
+
 .navbar a {
   font-size: 1.7em;
   margin-left: 4rem;
@@ -100,24 +116,44 @@ h2.hide{
   font-size: 1.8rem;
   transition: .3s;
   opacity: 0;
-  animation: slidemenu 1s ease forwards;
+  animation: slidemenu 1s ease forwards; /*3*/
   animation-delay: calc(.2s * var(--i));
 }
+
 .navbar a:hover,
 .navbar a.active {
   color:var(--special-color);
 }
 
-/* home page desgin */
+/********************** Sun Moon Desgin **********************/
+
+.lightmode{
+  position: fixed;
+  top:12%;
+  right:5%;
+  z-index: 99;
+}
+
+#icon1{
+  width: 4.5rem;
+  border-radius: 50%;
+  animation: glowing2 2s linear infinite; /*4*/
+  cursor: pointer;
+}
+
+/********************** Home Page Desgin **********************/
+
 .home {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--banner-bg);
 }
+
 .home-content  span{
   color: var(--special-color);
 }
+
 .inner-banner {
   display: flex;
   justify-content: center;
@@ -131,47 +167,29 @@ h2.hide{
   top: 0px;
   transition: .3s;
   opacity: 0;
-  animation: slidehomeimg 1s ease forwards;
+  animation: slidehomeimg 1s ease forwards; /*5*/
 }
+
 .image1 {
   position: relative;
   top: 0;
   left: 0;
   width: 45vw;
-  animation: floatImg1 4s ease-in-out infinite;
+  animation: floatImg1 4s ease-in-out infinite; /*6*/
 }
+
 .image2 {
   position: absolute;
   top: 0;
   left: 0;
   width: 45vw;
-  animation: floatImg2 4s ease-in-out infinite;
+  animation: floatImg2 4s ease-in-out infinite;  /*7*/
 }
-@keyframes floatImg1 {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(1.4rem);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@keyframes floatImg2 {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-1.4rem);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
+
 .home-content{
   margin: auto 8rem;
 }
+
 .home-content h1{
   font-size: 4.2rem;
   font-weight: 700;
@@ -179,7 +197,7 @@ h2.hide{
   color: var(--text-color);
   transition: .3s;
   opacity: 0;
-  animation: slidehelement 1s ease forwards;
+  animation: slidehelement 1s ease forwards; /*1*/
   animation-delay: .7s;
 }
 
@@ -189,16 +207,17 @@ h2.hide{
   color: var(--text-color);
   transition: .3s;
   opacity: 0;
-  animation: slidehelement 1s ease forwards;
+  animation: slidehelement 1s ease forwards; /*1*/
   animation-delay: .7s;
 }
+
 .home-content h4{
   font-size: 3.2rem;
   font-weight: 700;
   color: var(--text-color);
   transition: .3s;
   opacity: 0;
-  animation: slidehelement 1s ease forwards;
+  animation: slidehelement 1s ease forwards; /*1*/
   animation-delay: .7s;
 }
 
@@ -215,48 +234,9 @@ h4.hide{
   display: none;
 }
 
-@keyframes slidemenu {
-  0%{
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-  100%{
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-@keyframes slideheadimg {
-  0%{
-    transform: translate(0,0);
-    opacity: 0;
-  }
-  100%{
-    transform: translate(0,0);
-    opacity: 1;
-  }
-}
-@keyframes slidehomeimg {
-  0%{
-    transform: translate(-200px,-200px);
-    opacity: 0;
-  }
-  100%{
-    transform: translate(0,0);
-    opacity: 1;
-  }
-}
-@keyframes slideimg1 {
-  0%{
-    transform: translateX(-400px);
-    opacity: 0;
-  }
-  100%{
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
+/********************** Animation **********************/
 
-@keyframes slidehelement {
+@keyframes slidehelement {  /*1*/
   0%{
     transform: translateX(100px);
     opacity: 0;
@@ -266,6 +246,78 @@ h4.hide{
     opacity: 1;
   }
 }
+
+@keyframes slideheadimg { /*2*/
+  0%{
+    transform: translate(0,0);
+    opacity: 0;
+  }
+  100%{
+    transform: translate(0,0);
+    opacity: 1;
+  }
+}
+
+@keyframes slidemenu {    /*3*/
+  0%{
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes glowing2 { /*4*/
+  0% {
+        box-shadow: 0 0 30px var(--light-1);
+   }
+   50% {
+        box-shadow: 0 0 40px var(--light-2);
+   }
+   100% {
+        box-shadow: 0 0 30px var(--light-1);
+   }
+}
+
+@keyframes slidehomeimg {  /*5*/
+  0%{
+    transform: translate(-200px,-200px);
+    opacity: 0;
+  }
+  100%{
+    transform: translate(0,0);
+    opacity: 1;
+  }
+}
+
+@keyframes floatImg1 { /*6*/
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1.4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatImg2 {  /*7*/
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1.4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/********************** Mobile View **********************/
+
 @media (max-width:1200px){
   html {
     font-size: 55%;
@@ -288,6 +340,7 @@ h4.hide{
     padding: 2rem 3%;
   }
 }
+
 @media (max-width:768px){
   #menu-icon {
     display: block;

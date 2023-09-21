@@ -1,3 +1,5 @@
+/********************** Project **********************/
+
 .project{
    display:flex;
    flex-direction: column;
@@ -6,15 +8,18 @@
    background-color: var(--banner-bg2);
    
 }
+
 .project h1{
    margin-bottom: 4rem;
 }
+
 .project-content{
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    align-items: center;
    gap: 2.5rem;
 }
+
 .projects-box{
    position: relative;
    border-radius: 2rem;
@@ -22,16 +27,20 @@
    overflow: hidden;
    display: flex;
 }
+
 .projects-box img{
    width: 100%;
    transition: .5s ease;
 }
+
 .projects-box:hover img{
    transform: scale(1.1);
 }
+
 .project h1 span{
    color:var(--special-color);
 }
+
 .project h1{
    font-size: 4rem;
 }
@@ -52,18 +61,22 @@
    transform: translateY(100%);
    transition: .5s ease;
 }
+
 .projects-box:hover .project-layer{
    transform: translateY(0%);
 }
+
 .project-layer h2{
    font-size: 3rem;
    color: white;
 }
+
 .project-layer p{
    font-size: 2rem;
    color: white;
    margin: .3rem 0 1rem;
 }
+
 .project-layer a{
    display: inline-flex;
    justify-content: center;
@@ -73,10 +86,14 @@
    background:white;
    border-radius: 50%;
 }
+
 .project-layer a i{
    font-size: 2rem;
    color: black;
 }
+
+/********************** Mobile View **********************/
+
 @media (max-width:768px){
    .project h2 {
      margin-bottom: 3rem;
@@ -85,10 +102,11 @@
       padding: 3rem;
       grid-template-columns: repeat(2, 1fr);
    }
- }
- @media (max-width:450px){
+}
+
+@media (max-width:450px){
    .project-content {
       padding: 3rem;
       grid-template-columns: repeat(1, 1fr);
    }
- }
+}
