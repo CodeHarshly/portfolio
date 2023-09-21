@@ -49,9 +49,9 @@ section{
   align-items: center;
   z-index: 99; /* Ensure the navigation bar appears above other elements */
 }
-.header.sticky {
+/*.header.sticky {
   border-bottom: .1rem solid rgba(0, 0, 0, .2);
-}
+}*/
 .head-content{
   display: flex;
   align-items: center;

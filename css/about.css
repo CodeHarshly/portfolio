@@ -58,7 +58,7 @@
 }
 .bt {
   display: inline-block;
-  background-color:#272727;
+  background-color: var(--banner-bg2);
   padding: .8rem 2rem;
   margin: 0 auto;
   border-radius: 3rem;

@@ -10,7 +10,7 @@
         const pElement  = document.querySelector(".social");
         const scrollPos = window.scrollY;
         const scrollThreshold = 100;
-        const scrollThreshold2 = 1500;
+        const scrollThreshold2 = 5;
 
         if (scrollPos > scrollThreshold) {
             headimage.classList.add("hide");
@@ -29,7 +29,7 @@
             homeimage.classList.remove("hide");
             headerpad.style.setProperty("--head-padding", "3rem 5%");
         }
-        if (scrollPos > scrollThreshold2 || scrollPos < scrollThreshold) {
+        if (scrollPos < scrollThreshold2) {
             pElement.classList.add("hide");
         } else {
             pElement.classList.remove("hide");
@@ -79,8 +79,8 @@ window.onscroll= () => {
             });
         };
     });
-    let header = document.querySelector('header');
-    header.classList.toggle('sticky',window,scrollY > 100)
+    //let header = document.querySelector('header');
+    //header.classList.toggle('sticky',window,scrollY > 100)
     
     //remove toogle menu option
     menuIcon.classList.remove('bx-x');
