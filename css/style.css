@@ -16,7 +16,7 @@
   --image-width: 45vw;
   --position-o: sticky;
   --head-padding: 3rem 5%;
-  --special-color: lime;
+  --special-color: #26fc00;
   --text-color: white;
   --light-1: #ffffffdc;
   --light-2: #ddddddef;
@@ -132,6 +132,9 @@ h2.hide{
   top:12%;
   right:5%;
   z-index: 99;
+  transition: .3s;
+  opacity: 0;
+  animation: slidemenu 3s ease forwards; /*3*/
 }
 
 #icon1{

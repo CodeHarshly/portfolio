@@ -67,12 +67,12 @@
 }
 
 .project-layer h2{
-   font-size: 3rem;
-   color: white;
+   font-size: 2.7rem;
+   color: var(--special-color);
 }
 
 .project-layer p{
-   font-size: 2rem;
+   font-size: 1.8rem;
    color: white;
    margin: .3rem 0 1rem;
 }
@@ -96,7 +96,11 @@
 
 @media (max-width:768px){
    .project h2 {
-     margin-bottom: 3rem;
+      font-size: 2.4rem;
+   }
+   
+   .project-layer p{
+      font-size: 1.5rem;
    }
    .project-content {
       padding: 3rem;

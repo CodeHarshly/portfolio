@@ -27,8 +27,12 @@ function enableLightMode() {
   document.body.classList.add("light-mode");
   localStorage.setItem("lightMode", "1");
   icon.src = "images/Sun.png";
+  icon.style.animation = "slidemenu 3s ease forwards";
   imageid1.src = "images/homep2.png";
   imageid2.src = "images/aboutp2.png";
+  setTimeout(() => {
+    icon.style.animation ="";
+  }, 3000);
 }
 
 function disableLightMode() {
@@ -38,7 +42,11 @@ function disableLightMode() {
   document.body.classList.remove("light-mode");
   localStorage.setItem("lightMode", "0");
   icon.src = "images/Moon.png";
+  icon.style.animation = "slidemenu 3s ease forwards";
   imageid1.src = "images/homep1.png";
   imageid2.src = "images/aboutp1.png";
+  setTimeout(() => {
+    icon.style.animation ="";
+  }, 3000);
 }
 
