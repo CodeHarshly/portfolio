@@ -224,13 +224,13 @@
         <h1 class="title">Contact <span>Me</span></h1>
         <form action="https://formspree.io/f/xgejnbpn" method="POST">
             <div class="input-box1">
-                <input type="text" placeholder="Full Name" class="left">
-                <input type="email" placeholder="Email Address" class="right">
+                <input name="Name" type="text" placeholder="Full Name" class="left" required>
+                <input name="Email" type="email" placeholder="Email Address" class="right" required>
             </div>
             <div class="input-box2">
-                <input type="text" placeholder="Email Subject">
+                <input name="Subject" type="text" placeholder="Email Subject" required>
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="You Message" class="c-bottom"></textarea>
+            <textarea name=" Message" id="" cols="30" rows="10" placeholder="You Message" class="c-bottom" required></textarea>
             <input type="submit" value="Send Message" class="btn">
         </form>
     </section>
