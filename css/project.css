@@ -9,10 +9,6 @@
    
 }
 
-.project h1{
-   margin-bottom: 4rem;
-}
-
 .project-content{
    display: grid;
    grid-template-columns: repeat(3, 1fr);
@@ -24,6 +20,7 @@
    position: relative;
    border-radius: 2rem;
    box-shadow: 0 0 1rem var(--banner-bg3);
+   filter: drop-shadow(5px 5px 2px var(--font-shadow));
    overflow: hidden;
    display: flex;
 }
@@ -42,7 +39,9 @@
 }
 
 .project h1{
+   margin-bottom: 4rem;
    font-size: 4rem;
+   filter: drop-shadow(5px 5px 5px var(--font-shadow));
 }
 
 .projects-box .project-layer{
@@ -69,11 +68,13 @@
 .project-layer h2{
    font-size: 2.7rem;
    color: var(--special-color);
+   filter: drop-shadow(5px 5px 5px var(--font-shadow));
 }
 
 .project-layer p{
    font-size: 1.8rem;
    color: white;
+   filter: drop-shadow(5px 5px 5px var(--font-shadow));
    margin: .3rem 0 1rem;
 }
 
@@ -84,6 +85,7 @@
    width: 5rem;
    height: 5rem;
    background:white;
+   filter: drop-shadow(5px 5px 5px var(--font-shadow));
    border-radius: 50%;
 }
 

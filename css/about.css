@@ -19,11 +19,13 @@
 
 .about-head{
   font-size: 4rem;
+  filter: drop-shadow(5px 5px 5px var(--font-shadow));
 }
 
 .about-content p{
   display: block;
   font-size: 1.8rem;
+  filter: drop-shadow(5px 5px 5px var(--font-shadow));
   line-height: 1.5;
 }
 
@@ -33,6 +35,7 @@
   left: 30px;
   top: 0;
   width: 40vw;
+  filter: drop-shadow(5px 5px 5px var(--font-shadow));
   transition: .3s;
 }
 
@@ -49,7 +52,7 @@
   border-radius:50%;
   font-size: 2.8rem;
   color: var(--special-color);
-  box-shadow: 3px 3px 8px #5f5f5f;
+  box-shadow: 3px 3px 8px var(--font-shadow);
   transition: .5s;
   opacity: 0;
   animation: slidesoc 1s ease forwards; /*8*/
