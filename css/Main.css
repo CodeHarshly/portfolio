@@ -45,7 +45,7 @@ body {
 
 section{
   min-height: 100vh;
-  padding: 10rem 9% 8rem;
+  padding: 10rem 9% 2rem;
 }
 
 /********************** Header Desgin **********************/
@@ -339,14 +339,12 @@ h4.hide{
     padding: 0 3%;
   }
   section {
-    padding: 10rem 3% 8rem;
+    padding: 10rem 3% 2rem;
   }
   .skill{
     padding-bottom: 7rem;
   }
-  .contact{
-    min-height: auto;
-  }
+  
   .footer{
     padding: 2rem 3%;
   }

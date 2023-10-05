@@ -2,6 +2,7 @@
    window.addEventListener("scroll", function () {
         const homeimage = document.querySelector(".custom-image");
         const headimage = document.querySelector(".header-image");
+        const headerpad = document.querySelector(".header");
         const h1Element = document.querySelector("h1");
         const h3Element = document.querySelector("h3");
         const h2Element = document.querySelector("h2");
@@ -18,6 +19,7 @@
             h3Element.classList.add("hide");
             h4Element.classList.add("hide");
             homeimage.classList.add("hide");
+            headerpad.style.setProperty("--head-padding", "1.55rem 5%");
         } else {
             headimage.classList.remove("hide");
             h1Element.classList.remove("hide");
@@ -25,6 +27,7 @@
             h3Element.classList.remove("hide");
             h4Element.classList.remove("hide");
             homeimage.classList.remove("hide");
+            headerpad.style.setProperty("--head-padding", "3rem 5%");
         }
         if (scrollPos < scrollThreshold2) {
             pElement.classList.add("hide");
@@ -49,40 +52,27 @@ function startTypedAnimation() {
 // Use setTimeout to delay the start of the animation
 setTimeout(startTypedAnimation, 800); // Delay for 2 seconds (2000 milliseconds)
 
-/*/ menu nav toggle
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+/*let sections = document.querySelectorAll('section');
+let list = document.querySelectorAll('.list');
 
-menuIcon.onclick = () => {
-   menuIcon.classList.toggle('bx-x');
-   navbar.classList.toggle('active');
-};
-
-// nav active maker
-let sections = document.querySelectorAll('section');
-let navlinks = document.querySelectorAll('header nav a');
-
-window.onscroll= () => {
-    sections.forEach(sec => {
+window.onscroll = () => {
+    sections.forEach(sec =>{
         let top = window.scrollY;
         let offset = sec.offsetTop - 150;
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
-        if(top >= offset && top < offset + height){
-            navlinks.forEach(links => {
+        if(top >= offset && top < offset + height) {
+            list.forEach(links =>{
                 links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-            
+                document.querySelector('.list[href*=' + id + ']').classList.add('active');
             });
+
         };
     });
-    
-    //remove toogle menu option
-    menuIcon.classList.remove('bx-x');
-    navbar.classList.remove('active');
-};
-*/
+};*/
+// nav active maker
+
 // scroll behaviour
 
 ScrollReveal({ 
