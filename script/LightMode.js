@@ -20,6 +20,13 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
+
+
+
+
+
+
+
 function enableLightMode() {
   var icon = document.getElementById("icon1");
   var imageid1 = document.getElementById("imageid1");

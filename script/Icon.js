@@ -10,6 +10,59 @@ function setActiveLink(sectionId) {
     if (listItem) {
         listItem.parentElement.classList.add('active');
     }
+
+    var iLightMode = localStorage.getItem("lightMode");
+
+if (iLightMode === "1") {
+    const iconText = listItem.querySelector(".text").textContent.toLowerCase();
+    let newColor;
+
+    // Set the --clr variable based on the clicked icon
+    switch (iconText) {
+        case "about":
+            newColor = "rgb(216, 216, 216)";
+            break;
+        case "skills":
+            newColor = "#ffffffe8";
+            break;
+        case "project":
+            newColor = "rgb(216, 216, 216)";
+            break;
+        case "contact":
+            newColor = "#ffffffe8";
+            break;
+        default:
+            newColor = "white"; // Default color
+            break;
+    }
+
+    // Change the color of the --clr variable
+    document.documentElement.style.setProperty("--circle-icon", newColor);
+} else {
+    const iconText = listItem.querySelector(".text").textContent.toLowerCase();
+    let newColor;
+
+    // Set the --clr variable based on the clicked icon
+    switch (iconText) {
+        case "about":
+            newColor = "#272727";
+            break;
+        case "skills":
+            newColor = "#383838";
+            break;
+        case "project":
+            newColor = "#272727";
+            break;
+        case "contact":
+            newColor = "#383838";
+            break;
+        default:
+            newColor = "#212121"; // Default color
+            break;
+    }
+    document.documentElement.style.setProperty("--circle-icon", newColor);
+
+}
 }
 
 function handleScroll() {
@@ -48,3 +101,5 @@ list.forEach((item) => item.addEventListener('click', function (event) {
 // Listen for scroll events to automatically update the active link
 
 window.addEventListener('scroll', handleScroll);
+
+
