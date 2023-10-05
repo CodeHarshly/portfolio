@@ -97,14 +97,15 @@
         bottom: 0;
         width: 100%;
         height: 70px;
-        border-radius: 6px;
+        border-radius: 8px;
+        border-top: 8px solid var(--circle-icon);
     }
     .navigation ul {
         display: flex;
         flex-direction: row;
     }
     .navigation ul li.active a .icon {
-        transform: translateY(-32px);
+        transform: translateY(-30px);
     }
     .navigation ul li a .text {
         transition: 0.5s;
@@ -116,9 +117,20 @@
         opacity: 1;
     }
     .indicator {
-        top: -50%;
+        top: -56%;
     }
-    
+    .indicator::before {
+        top: 50%;
+        left: -22px;
+        border-top-right-radius: 20px;
+        box-shadow: 1px -8px 0 0 var(--circle-icon);
+    }
+    .indicator::after {
+        top: 50%;
+        right: -22px;
+        border-top-left-radius: 20px;
+        box-shadow: -1px -8px 0 0 var(--circle-icon);
+    }
     .navigation ul li:nth-child(1).active ~ .indicator {
         transform: translateX(calc(70px * 0));
     }
@@ -136,8 +148,13 @@
     }
 }
 @media (min-width:768px) {
+    .navigation {
+        border-right: 8px solid var(--circle-icon);
+        border-top: 8px solid var(--circle-icon);
+        border-bottom: 8px solid var(--circle-icon);
+    }
     .navigation ul li.active a .icon {
-        transform: translateX(34.5px);
+        transform: translateX(30px);
     }
     .navigation ul li a .text {
         opacity: 0;
@@ -148,19 +165,19 @@
         opacity: 1;
     }
     .indicator{
-        right: -50%;
+        right: -56%;
     }
     .indicator::before {
         right: 50%;
         top:-22px;
         border-bottom-right-radius: 20px;
-        box-shadow: 10px 1px 0 0 var(--circle-icon);
+        box-shadow: 8px 1px 0 0 var(--circle-icon);
     }
     .indicator::after {
         right: 50%;
         bottom: -22px;
         border-top-right-radius: 20px;
-        box-shadow: 10px -1px 0 0 var(--circle-icon);
+        box-shadow: 8px -1px 0 0 var(--circle-icon);
     }
     .navigation ul li:nth-child(1).active ~ .indicator {
         transform: translateY(calc(70px * 0));

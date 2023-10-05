@@ -1,5 +1,8 @@
 const list = document.querySelectorAll('.list');
 const sections = document.querySelectorAll('section');
+const icons = document.querySelectorAll('.navigation ul li a .icon');
+
+let clickEventOccurred = true;
 
 function setActiveLink(sectionId) {
     // Remove the 'active' class from all list items
@@ -13,56 +16,57 @@ function setActiveLink(sectionId) {
 
     var iLightMode = localStorage.getItem("lightMode");
 
-if (iLightMode === "1") {
-    const iconText = listItem.querySelector(".text").textContent.toLowerCase();
-    let newColor;
+    if (iLightMode === "1") {
+        const iconText = listItem.querySelector(".text").textContent.toLowerCase();
+        let newColor;
 
-    // Set the --clr variable based on the clicked icon
-    switch (iconText) {
-        case "about":
-            newColor = "rgb(216, 216, 216)";
-            break;
-        case "skills":
-            newColor = "#ffffffe8";
-            break;
-        case "project":
-            newColor = "rgb(216, 216, 216)";
-            break;
-        case "contact":
-            newColor = "#ffffffe8";
-            break;
-        default:
-            newColor = "white"; // Default color
-            break;
+        // Set the --clr variable based on the clicked icon
+        switch (iconText) {
+           case "about":
+                newColor = "rgb(216, 216, 216)";
+                break;
+            case "skills":
+                newColor = "#ffffffe8";
+                break;
+            case "project":
+                newColor = "rgb(216, 216, 216)";
+                break;
+            case "contact":
+                newColor = "#ffffffe8";
+                break;
+            default:
+                newColor = "white"; // Default color
+                break;
+        }
+
+        // Change the color of the --clr variable
+        document.documentElement.style.setProperty("--circle-icon", newColor);
+    } 
+    else {
+        const iconText = listItem.querySelector(".text").textContent.toLowerCase();
+        let newColor;
+
+        // Set the --clr variable based on the clicked icon
+        switch (iconText) {
+            case "about":
+                newColor = "#272727";
+                break;
+            case "skills":
+                newColor = "#383838";
+                break;
+                case "project":
+                newColor = "#272727";
+                break;
+            case "contact":
+                newColor = "#383838";
+                break;
+            default:
+                newColor = "#212121"; // Default color
+                break;
+        }
+        document.documentElement.style.setProperty("--circle-icon", newColor);
+
     }
-
-    // Change the color of the --clr variable
-    document.documentElement.style.setProperty("--circle-icon", newColor);
-} else {
-    const iconText = listItem.querySelector(".text").textContent.toLowerCase();
-    let newColor;
-
-    // Set the --clr variable based on the clicked icon
-    switch (iconText) {
-        case "about":
-            newColor = "#272727";
-            break;
-        case "skills":
-            newColor = "#383838";
-            break;
-        case "project":
-            newColor = "#272727";
-            break;
-        case "contact":
-            newColor = "#383838";
-            break;
-        default:
-            newColor = "#212121"; // Default color
-            break;
-    }
-    document.documentElement.style.setProperty("--circle-icon", newColor);
-
-}
 }
 
 function handleScroll() {
@@ -88,14 +92,16 @@ function handleScroll() {
     setActiveLink(currentSection);
 }
 
+
 // Add click event listeners to all list items
-list.forEach((item) => item.addEventListener('click', function (event) {
+list.forEach((item) => item.addEventListener('click', function () {
     console.log("yes");
-    event.preventDefault();
-    const sectionId = this.querySelector('a').getAttribute('href').substring(1);
-    setActiveLink(sectionId);
-    const targetSection = document.querySelector(`#${sectionId}`);
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+    preventDefault();
+    list.forEach((item) => item.classList.remove('active'));
+    
+    // Add the 'active' class to the clicked list item
+    this.classList.add('active');
+    
 }));
 
 // Listen for scroll events to automatically update the active link
