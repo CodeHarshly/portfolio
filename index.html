@@ -1,18 +1,68 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/Main.css">
     <link rel="stylesheet" type="text/css" href="css/about.css">
     <link rel="stylesheet" type="text/css" href="css/skill.css">
     <link rel="stylesheet" type="text/css" href="css/project.css">
     <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <link rel="stylesheet" type="text/css" href="css/Icon.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <title>Harsh Portfolio</title>
 </head>
 <body>
-    
+    <!--------------Icon---------------->
+    <div class="navicon">
+        <div class="navigation">
+            <ul>
+                <li class="list active">
+                    <a href="#home">
+                        <span class="icon">
+                            <i class='bx bxs-home'></i>
+                        </span>
+                        <span class="text">Home</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#about">
+                        <span class="icon">
+                            <i class='bx bx-user' ></i>
+                        </span>
+                        <span class="text">About</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#skill">
+                        <span class="icon">
+                            <i class='bx bx-code-alt' ></i>
+                        </span>
+                        <span class="text">Skills</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#project">
+                        <span class="icon">
+                            <i class='bx bx-image-alt' ></i>
+                        </span>
+                        <span class="text">Project</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#contact">
+                        <span class="icon">
+                            <i class='bx bx-envelope' ></i>
+                        </span>
+                        <span class="text">Contact</span>
+                    </a>
+                </li>
+                <div class="indicator"></div>
+            </ul>
+        </div>
+    </div>
     <!-------------------- Header ------------------------>
 
     <header class="header">
@@ -20,7 +70,7 @@
             <img src="images/harshpp.png" alt="Profile Image" style="--i:1" class="header-image">
             <h2 style="--i:2"><span>Harshdeep Singh</span></h2>
         </div>
-        <i class='bx bx-menu' id="menu-icon"></i>
+        <!--<i class='bx bx-menu' id="menu-icon"></i>
         <nav class="navbar" id="navbar">
             <a href="#home" style="--i:1" class="active">Home</a>
             <a href="#about" style="--i:2">About</a>        
@@ -28,13 +78,13 @@
             <a href="#project" style="--i:4">Project</a>
             <a href="#contact" style="--i:5">Contact</a>
             
-        </nav>
+        </nav-->
+        <div class="lightmode" >
+            <img src="images/Moon.png" id="icon1" alt="light mode">
+        </div>
     </header>
-    <div class="lightmode" >
-        <img src="images/Moon.png" id="icon1" >
-    </div>
     
-    <!-------------------- Home page ------------------------>
+    <!-------------------- Home page ----------------------->
     
     <section class="home" id="home" > 
         <div class="inner-banner">
@@ -50,7 +100,7 @@
         </div>
     </section>
     
-    <!-------------------- About page ------------------------>
+    <!------------------- About page --------------------->
     
     <section class="about" id="about">
         <div class="custom-image1 left">
@@ -62,12 +112,12 @@
             <h2></h2>
             <p class="right">I'm a passionate and curious computer science enthusiast with a strong appetite for learning and coding. As a fresher, I've already built a website and developed a Windows game, showcasing my dedication to mastering new skills in the world of programming. I'm excited to embark on a journey of continuous growth and innovation in the field of computer science.</p>
             <div class="social">
-                <a href="https://instagram.com/harshdeep_singh_choudhary" style="--i:1"><i class='bx bxl-instagram'></i></a>
-                <a href="https://www.facebook.com/profile.php?id=100028867681616&mibextid=haYZDX" style="--i:2"><i class='bx bxl-facebook'></i></a>
-                <a href="https://www.linkedin.com/in/harshdeep-singh-769552253" style="--i:3"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/CodeHarshly/" style="--i:4"><i class='bx bxl-github'></i></a>
+                <a href="https://instagram.com/harshdeep_singh_choudhary" title="Instagram" target="_blank" style="--i:1"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100028867681616&mibextid=haYZDX" title="Facebook" target="_blank" style="--i:2"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.linkedin.com/in/harshdeep-singh-769552253" title="Linkedin" target="_blank" style="--i:3"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/CodeHarshly/" title="Github" target="_blank" style="--i:4"><i class='bx bxl-github'></i></a>
             </div>
-            <a href="https://drive.google.com/file/d/1fDkhymiTw77HrGCsAPUlk35iuDSC3lrL/view?usp=drivesdk" class="bt" >MY Resume</a>
+            <a href="https://drive.google.com/file/d/1fDkhymiTw77HrGCsAPUlk35iuDSC3lrL/view?usp=drivesdk" title="MY Resume"  target="_blank" class="bt" >MY Resume</a>
             <!--<a href="#" class="bt">Read more</a>-->
         </div>
     </section>
@@ -79,7 +129,7 @@
         <div class="s-content">    
             <div class="skill-content left">
                 
-                <!-------------------- Technical skill ------------------------>
+                <!-------------------- Technical skill ---------------->
                 <h2>Technical Skills</h2>
                 <div class="technical-bars">
                     <div class="bar"><i style="color:rgb(255, 123, 0)"class='bx bxl-html5'></i>
@@ -184,7 +234,7 @@
                 <div class="project-layer">
                     <h2>Website</h2>
                     <p>Designed an interactive Bingo game from scratch using HTML, CSS and JavaScript. Ready To play? Click the link below.</p>
-                    <a href="https://CodeHarshly.github.io/Bingo"><i class='bx bx-link-external'></i></a>
+                    <a href="https://CodeHarshly.github.io/Bingo" title="Bingo Game" target="_blank"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
             <div class="projects-box">
@@ -192,7 +242,7 @@
                 <div class="project-layer">
                     <h2>Website</h2>
                     <p>Built a website that equips young learners with math tricks, enabling pen-free problem-solving in seconds.</p>
-                    <a href="https://github.com/CodeHarshly/MathsTricks"><i class='bx bx-link-external'></i></a>
+                    <a href="https://github.com/CodeHarshly/MathsTricks" title="Math tricks" target="_blank"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
             <div class="projects-box">
@@ -243,14 +293,15 @@
             <p>Thank you for visiting my Portfolio.</p>
         </div>
         <div class="scroll-Up">
-            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+            <a href="#" title="Scroll up"><i class='bx bx-up-arrow-alt'></i></a>
         </div>
     </footer>
-
+    
     <!--------------script---------------->
 
-    <script src="script.js"></script>
-    <script src="LightMode.js"></script>
+    <script src="script/Main.js"></script>
+    <script src="script/Icon.js"></script>
+    <script src="script/LightMode.js"></script>
 
 </body>
 </html>
