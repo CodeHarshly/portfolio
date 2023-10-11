@@ -1,5 +1,7 @@
 /********************** Contact **********************/
-
+section .conntact{
+   min-height: auto;
+}
 .contact{
    background-color: var(--banner-bg3);
    display: flex;
@@ -87,7 +89,7 @@
 
  .footer{
    position: relative;
-   bottom: 0;
+   bottom: 4rem;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -101,16 +103,18 @@
    color: var(--text-color);
    filter: drop-shadow(5px 5px 5px var(--font-shadow));
  }
-
+.extraspace{
+   background: var(--banner-bg3);
+   width: 100%;
+   height:4rem;
+}
 /********************** Mobile View **********************/
 
  @media (max-width:768px){
    .contact form{
       max-width: 47rem; 
    }
-   .footer{
-      padding-bottom: 10rem;
-   }
+   
 }
 
 @media (max-width: 450px){

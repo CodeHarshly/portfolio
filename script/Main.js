@@ -52,27 +52,6 @@ function startTypedAnimation() {
 // Use setTimeout to delay the start of the animation
 setTimeout(startTypedAnimation, 800); // Delay for 2 seconds (2000 milliseconds)
 
-/*let sections = document.querySelectorAll('section');
-let list = document.querySelectorAll('.list');
-
-window.onscroll = () => {
-    sections.forEach(sec =>{
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
-
-        if(top >= offset && top < offset + height) {
-            list.forEach(links =>{
-                links.classList.remove('active');
-                document.querySelector('.list[href*=' + id + ']').classList.add('active');
-            });
-
-        };
-    });
-};*/
-// nav active maker
-
 // scroll behaviour
 
 ScrollReveal({ 
