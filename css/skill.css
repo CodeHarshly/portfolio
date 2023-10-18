@@ -97,7 +97,7 @@
 }
 
 .progress-line.html span{
-  width:90%;
+  width:80%;
 }
 
 .progress-line.css span{
@@ -134,7 +134,7 @@
 }
 
 .progress-line.html span::after{
-  content: '90%';
+  content: '80%';
 }
 
 .progress-line.css span::after{
@@ -278,19 +278,19 @@
 
 @keyframes animate-path2{ /*13*/
   100% {
-    stroke-dashoffset: 100;
+    stroke-dashoffset: 150;
   }
 }
 
 @keyframes animate-path3{ /*14*/
   100% {
-    stroke-dashoffset: 125;
+    stroke-dashoffset: 100;
   }
 }
 
 @keyframes animate-path4{ /*15*/
   100% {
-    stroke-dashoffset: 100;
+    stroke-dashoffset: 75;
   }
 }
 

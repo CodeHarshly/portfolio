@@ -80,7 +80,7 @@ function handleScroll() {
     });*/
     sections.forEach(sec =>{
         let top = window.scrollY;
-        let offset = sec.offsetTop - 850;
+        let offset = sec.offsetTop - 750;
         let height = sec.offsetHeight;
 
         if(top >= offset && top < offset + height) {
