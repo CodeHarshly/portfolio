@@ -19,13 +19,13 @@
 
 .about-head{
   font-size: 4rem;
-  filter: drop-shadow(5px 5px 5px var(--font-shadow));
+  filter: drop-shadow(1px 1px 1px var(--font-shadow));
 }
 
 .about-content p{
   display: block;
   font-size: 1.8rem;
-  filter: drop-shadow(5px 5px 5px var(--font-shadow));
+  filter: drop-shadow(1px 1px 1px var(--font-shadow));
   line-height: 1.5;
 }
 

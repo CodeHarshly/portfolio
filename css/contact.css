@@ -17,7 +17,7 @@ section .conntact{
 .contact h1{
    font-size: 4rem;
    margin-bottom: 3rem;
-   filter: drop-shadow(5px 5px 5px var(--font-shadow));
+   filter: drop-shadow(1px 1px 1px var(--font-shadow));
 }
 
 .contact form{
@@ -101,7 +101,7 @@ section .conntact{
  .footer-content p{
    font-size: 1.6rem;
    color: var(--text-color);
-   filter: drop-shadow(5px 5px 5px var(--font-shadow));
+   filter: drop-shadow(1px 1px 1px var(--font-shadow));
  }
 .extraspace{
    background: var(--banner-bg3);

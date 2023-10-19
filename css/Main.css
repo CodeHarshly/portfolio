@@ -79,7 +79,7 @@ section{
   margin: auto 2rem;
   font-weight: 700;
   color: var(--text-color); 
-  filter: drop-shadow(5px 5px 5px var(--font-shadow));
+  filter: drop-shadow(1px 1px 1px var(--font-shadow));
   opacity: 0;
   animation: slidehelement 1s ease forwards; /*1*/
   animation-delay: calc(.2s * var(--i));
@@ -87,7 +87,7 @@ section{
 
 h2.hide{
   display: block;
-  filter: drop-shadow(5px 5px 5px var(--font-shadow));
+  filter: drop-shadow(1px 1px 1px var(--font-shadow));
 }
 
 .header-image{
@@ -176,7 +176,7 @@ h2.hide{
   font-weight: 700;
   line-height: 1.5;
   color: var(--text-color);
-  filter: drop-shadow(5px 5px 5px var(--font-shadow));
+  filter: drop-shadow(1px 1px 1px var(--font-shadow));
   transition: .3s;
   opacity: 0;
   animation: slidehelement 1s ease forwards; /*1*/
@@ -187,7 +187,7 @@ h2.hide{
   font-size: 3.2rem;
   font-weight: 700;
   color: var(--text-color);
-  filter: drop-shadow(5px 5px 5px var(--font-shadow));
+  filter: drop-shadow(1px 1px 1px var(--font-shadow));
   transition: .3s;
   opacity: 0;
   animation: slidehelement 1s ease forwards; /*1*/
@@ -198,7 +198,7 @@ h2.hide{
   font-size: 3.2rem;
   font-weight: 700;
   color: var(--text-color);
-  filter: drop-shadow(5px 5px 5px var(--font-shadow));
+  filter: drop-shadow(1px 1px 1px var(--font-shadow));
   transition: .3s;
   opacity: 0;
   animation: slidehelement 1s ease forwards; /*1*/
