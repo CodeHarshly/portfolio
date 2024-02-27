@@ -93,7 +93,9 @@ h2.hide{
 .header-image{
   display: none;
   position: relative;
-  width: 7rem;
+  width: 4rem;
+  height: 100%;
+  border-radius: 50%;
   filter: drop-shadow(5px 5px 5px var(--font-shadow));
   transition: .3s;
   opacity: 0;
@@ -162,8 +164,8 @@ h2.hide{
 .image2 {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 45vw;
+  left: 7rem;
+  width: 35vw;
   animation: floatImg2 4s ease-in-out infinite;  /*7*/
 }
 
@@ -363,5 +365,7 @@ h4.hide{
     width: 70vw;
     margin-top: 4rem;
   }
-  
+  .image2{
+    left: 2.6rem;
+  }
 }
