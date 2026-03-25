@@ -528,7 +528,32 @@
             opacity: 1;
         }
 
-        .project-img::before {
+        .project-img:not(.project-img--video)::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                90deg,
+                var(--surface) 25%,
+                rgba(0, 255, 204, 0.05) 50%,
+                var(--surface) 75%
+            );
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            z-index: 0;
+        }
+
+        .project-img img.loaded ~ .project-img::before,
+        .project-img.img-loaded::before {
+            display: none;
+        }
+
+        @keyframes shimmer {
+            0%   { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        .project-img--video::before {
             content: '';
             position: absolute;
             inset: 0;
@@ -543,14 +568,17 @@
             z-index: 1;
         }
 
-        .project-img img.loaded ~ .project-img::before,
-        .project-img.img-loaded::before {
+        .project-img--video.vid-loaded::before {
             display: none;
         }
 
-        @keyframes shimmer {
-            0%   { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
+        .project-img--video video {
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .project-img--video.vid-loaded video {
+            opacity: 1;
         }
         
         .project-card:hover .project-img img {
@@ -1261,7 +1289,7 @@
 
                 <div class="project-card project-card--featured">
                     <div class="project-img project-img--live">
-                        <img src="images/osakagroup.in_.png" alt="Osaka Group Preview" />
+                        <img src="images/osakagroup.in_.webp" alt="Osaka Group Preview" />
                         <div class="project-img-overlay">
                             <a href="https://osakagroup.in" target="_blank" class="preview-btn">
                                 Visit Live Site ↗
@@ -1285,7 +1313,7 @@
 
                 <div class="project-card project-card--featured">
                     <div class="project-img project-img--live">
-                        <img src="images/Chisuracademy.png" alt="Osaka Group Preview" />
+                        <img src="images/Chisuracademy.webp" alt="Osaka Group Preview" />
                         <div class="project-img-overlay">
                             <a href="https://chisuracademy.com" target="_blank" class="preview-btn">
                                 Visit Live Site ↗
@@ -1314,7 +1342,7 @@
 
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="images/Bingo.png" alt="Web Bingo" loading="lazy" onerror="this.style.display='none'" />
+                        <img src="images/Bingo.webp" alt="Web Bingo" loading="lazy" onerror="this.style.display='none'" />
                         <span class="project-badge project-badge--personal">Personal</span>
                     </div>
                     <div class="project-body">
@@ -1334,7 +1362,7 @@
 
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="images/Media.png" alt="Social Media" loading="lazy" onerror="this.style.display='none'" />
+                        <img src="images/Media.webp" alt="Social Media" loading="lazy" onerror="this.style.display='none'" />
                         <span class="project-badge project-badge--personal">Personal</span>
                     </div>
                     <div class="project-body">
@@ -1355,7 +1383,7 @@
 
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="images/Weather.png" alt="Weather App" loading="lazy" onerror="this.style.display='none'" />
+                        <img src="images/Weather.webp" alt="Weather App" loading="lazy" onerror="this.style.display='none'" />
                         <span class="project-badge project-badge--internship">Internship</span>
                     </div>
                     <div class="project-body">
@@ -1394,7 +1422,7 @@
                 </div>
 
                 <div class="project-card">
-                    <div class="project-img" style="cursor:pointer;"
+                    <div class="project-img project-img--video" style="cursor:pointer;"
                         onclick="this.querySelector('video').requestFullscreen()">
                         <video src="Videos/Chat-App.mp4" autoplay muted loop playsinline preload="metadata"
                             style="width:100%;height:100%;object-fit:cover;display:block;"></video>
@@ -1415,7 +1443,7 @@
                 </div>
 
                 <div class="project-card project-card--wip">
-                    <div class="project-img" style="cursor:pointer;"
+                    <div class="project-img project-img--video" style="cursor:pointer;"
                         onclick="this.querySelector('video').requestFullscreen()">
                         <video src="Videos/Truth-or-Dare.mp4" autoplay muted loop playsinline preload="metadata"
                             style="width:100%;height:100%;object-fit:cover;display:block;"></video>
@@ -1869,9 +1897,9 @@
             }
         });
 
-        document.querySelectorAll('.project-img video').forEach(video => {
+        document.querySelectorAll('.project-img--video video').forEach(video => {
             video.addEventListener('canplay', () => {
-                video.closest('.project-img').classList.add('img-loaded');
+                video.closest('.project-img--video').classList.add('vid-loaded');
             });
         });
         
