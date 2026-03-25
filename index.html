@@ -1869,11 +1869,7 @@
             }
         });
 
-        document.querySelectorAll('.project-img video').forEach(video => {
-            video.addEventListener('canplay', () => {
-                video.closest('.project-img').classList.add('img-loaded');
-            });
-        });
+
         
         gsap.to('#projects .section-tag', {
             opacity: 1, y: 0, duration: 0.7,
