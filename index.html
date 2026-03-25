@@ -1376,7 +1376,7 @@
                             <span class="project-tech">Android App</span>
                         </div>
                         <h3 class="project-title">Chatting App</h3>
-                        <p class="project-desc">Built a chat interface using React Native, Expo Go and Firebase. Implemented authentication, messaging and cloud sync. .</p>
+                        <p class="project-desc">Built a chat interface using React Native, Expo Go and Firebase. Implemented authentication, real-time messaging, and cloud synchronization.</p>
                         <div class="projects-link" style="display:none;">
                             <a href="#" class="project-link">View Project →</a>
                             <a href="https://github.com/codeharshly" class="project-link">GitHub →</a>
@@ -1397,7 +1397,7 @@
                             <span class="project-tech">Android App</span>
                         </div>
                         <h3 class="project-title">Truth or Dare App</h3>
-                        <p class="project-desc">Built a interactive truth or dare game from scractch Multiplayer game with offline & online modes(React + Capacitor). Features: Spin wheel, prompts, chatbox, Firebase sync. </p>
+                        <p class="project-desc">Built an interactive multiplayer Truth or Dare game from scratch with offline & online modes(React + Capacitor).</p>
                         <div class="projects-link" style="display:none;">
                             <a href="#" class="project-link">View Project →</a>
                             <a href="https://github.com/codeharshly" class="project-link">GitHub →</a>
@@ -1922,6 +1922,10 @@
                 name: name,
                 from_email: email,
                 message: message,
+                time:       new Date().toLocaleString('en-IN', {
+                  dateStyle: 'medium',
+                  timeStyle: 'short'
+                }),
             })
                 .then(() => {
                     btn.textContent = 'Message Sent ✓';
