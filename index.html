@@ -540,7 +540,7 @@
             );
             background-size: 200% 100%;
             animation: shimmer 1.5s infinite;
-            z-index: 0;
+            z-index: 1;
         }
 
         .project-img img.loaded ~ .project-img::before,
@@ -1867,6 +1867,12 @@
                     img.closest('.project-img').classList.add('img-loaded');
                 });
             }
+        });
+
+        document.querySelectorAll('.project-img video').forEach(video => {
+            video.addEventListener('canplay', () => {
+                video.closest('.project-img').classList.add('img-loaded');
+            });
         });
         
         gsap.to('#projects .section-tag', {
